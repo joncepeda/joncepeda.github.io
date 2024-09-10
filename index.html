@@ -14,6 +14,55 @@
   <script src="https://cdn.tailwindcss.com"></script>
  </head>
  <body>
+  <div class="main-loader fixed w-full h-screen overflow-hidden z-10 top-0 left-0 bg-black ">
+    <div class="box-of-star1">
+      <div class="star star-position1"></div>
+      <div class="star star-position2"></div>
+      <div class="star star-position3"></div>
+      <div class="star star-position4"></div>
+      <div class="star star-position5"></div>
+      <div class="star star-position6"></div>
+      <div class="star star-position7"></div>
+    </div>
+    <div class="box-of-star2">
+      <div class="star star-position1"></div>
+      <div class="star star-position2"></div>
+      <div class="star star-position3"></div>
+      <div class="star star-position4"></div>
+      <div class="star star-position5"></div>
+      <div class="star star-position6"></div>
+      <div class="star star-position7"></div>
+    </div>
+    <div class="box-of-star3">
+      <div class="star star-position1"></div>
+      <div class="star star-position2"></div>
+      <div class="star star-position3"></div>
+      <div class="star star-position4"></div>
+      <div class="star star-position5"></div>
+      <div class="star star-position6"></div>
+      <div class="star star-position7"></div>
+    </div>
+    <div class="box-of-star4">
+      <div class="star star-position1"></div>
+      <div class="star star-position2"></div>
+      <div class="star star-position3"></div>
+      <div class="star star-position4"></div>
+      <div class="star star-position5"></div>
+      <div class="star star-position6"></div>
+      <div class="star star-position7"></div>
+    </div>
+    <div data-js="astro" class="astronaut z-40">
+      <div class="head"></div>
+      <div class="arm arm-left"></div>
+      <div class="arm arm-right"></div>
+      <div class="body">
+        <div class="panel"></div>
+      </div>
+      <div class="leg leg-left"></div>
+      <div class="leg leg-right"></div>
+      <div class="schoolbag"></div>
+    </div>
+  </div>
   <div class="main-first fixed w-full h-screen">
     <img src="./src/images/space.jpg" class="parallax-img-bg fixed top-0 left-0 w-full h-screen z-0 object-cover" data-0="transform:scale(1);" data-10400="transform:scale(1.2);" data-12400="transform:scale(1);" data-27000="transform: scale(1) ">
     <div class="sky w-full absolute z-10" data-0="transform:scale(1);" data-10400="transform:scale(1.2);">
@@ -61,7 +110,7 @@
         data-5400="opacity: 1;"
         data-6400="opacity: 0;"
         >
-        <div class="w-full sm:w-7/12 md:w-8/12 lg:w-full justify-self-center sm:justify-self-end md:justify-self-end lg:justify-self-center self-center sm:self-start xl:self-center pt-0 sm:pt-20 md:pt-15 lg:pt-10 xl:pt-0 sm:pr-10 xl:pr-0">
+        <div class="w-full sm:w-7/12 md:w-8/12 lg:w-full justify-self-center sm:justify-self-end md:justify-self-end lg:justify-self-center self-center sm:self-start xl:self-center pt-0 sm:pt-20 md:pt-15 lg:pt-32 xl:pt-0 sm:pr-10 xl:pr-0">
           <p class="text-slate-200 star-jedi text-4xl sm:text-5xl md:text-6xl w-full text-center md:mb-10"
             >Who am i ?</p>
           <div class="text-slate-200 patua-one p-5 md:p-0 w-full md:max-w-screen-sm text-justify sm:text-lg md:text-xl">Experienced Shopify Developer and Front-End Developer over 10 years of
@@ -395,39 +444,38 @@
   <script  type="text/javascript">
     document.addEventListener("DOMContentLoaded", (event) => {
       var s = skrollr.init({
-        smoothScrolling: true,
-        easing: {
-          wtf: Math.random,
-          inverted: function(p) {
-            return 1 - p;
-          }
-        }
+        smoothScrolling: true
       });
     });
     window.onload = function() {
-      // The page is fully loaded, including images and other resources
       if (typeof callback === 'function') {
           callback();
       }
     };
-    // Ensure that the scroll container is scrollable
     let scrollDownButton = document.querySelector(".scroll-down svg");
     scrollDownButton.addEventListener('click', (e) => {
       window.scrollBy(0, 800);
     })
     function checkAllAssetsLoaded(callback) {
-    // Use the window.onload event to ensure all assets are loaded
         window.onload = function() {
-            // The page is fully loaded, including images and other resources
             if (typeof callback === 'function') {
                 callback();
             }
         };
     }
 
-    // Example usage
     checkAllAssetsLoaded(function() {
-        console.log("All assets are fully loaded!");
+      const loaderDiv = document.querySelector(".main-loader");
+        setTimeout(()=> {
+          const astronaut = loaderDiv.querySelector(".astronaut");
+          astronaut.style.top = '-100%';
+          setTimeout(()=> {
+            loaderDiv.style.opacity = 0;
+            setTimeout(()=> {
+              loaderDiv.style.display = 'none';
+            },1200);
+          }, 1000);
+        }, 1500)
     });
   </script>
   <script src="src/js/main.js" async defer></script>
