@@ -239,7 +239,7 @@ body {
 
 .playing .wave {
     border-radius: 40%;
-    animation: wave 3000ms infinite linear;
+    animation: wave 13000ms infinite linear;
 }
 
 .wave {
@@ -248,7 +248,7 @@ body {
     }
 
 .playing .wave:nth-child(2) {
-    animation-duration: 4000ms;
+    animation-duration: 10000ms;
 }
 
 .wave:nth-child(2) {
@@ -256,11 +256,19 @@ body {
 }
 
 .playing .wave:nth-child(3) {
-    animation-duration: 5000ms;
+    animation-duration: 7000ms;
 }
 
 .wave:nth-child(3) {
     animation-duration: 45s;
+}
+@media screen and (max-width: 568px) {
+  .wave {
+    margin-top: -70%;
+  }
+  .wave:nth-child(2), .wave:nth-child(3) {
+    top: 0;
+  }
 }
 .main-clouds {
     z-index: 110;
@@ -281,7 +289,35 @@ body {
 .card-tags span {
     font-size: 0.5rem;
 }
-   
+.card a:after {
+  content: url("data:image/svg+xml,%0A%3Csvg fill='%23FFFFFF' height='15px' width='15px' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 330.00 330.00' xml:space='preserve' transform='rotate(0)' stroke='%23FFFFFF' stroke-width='11.549999999999999'%3E%3Cpath id='XMLID_222_' d='M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z'/%3E%3C/svg%3E");
+  position: relative;
+  left: 20px;
+  top: 2px;
+  transition: all 1s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+}
+.card a:hover:after {
+  left: 25px;
+}
+.blaze-cat {
+  height: 100vh;
+
+}
+.blaze-cat > div{
+  transition: all 3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 100%;
+  transform: translateY(-50%);
+  align-items: flex-end;
+}
+.blaze-cat.active {
+  z-index: 121;
+}
+.blaze-cat.active > div {
+  transform: translateY(calc(100% - 250px));
+}
 @keyframes pulse512 {
     0% {
         box-shadow: 0 0 0 0 #05bada66;
