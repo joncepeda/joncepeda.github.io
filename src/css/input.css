@@ -762,7 +762,9 @@ body {
   display: flex;
   gap: 15px;
 }
-
+.blaze-track-container {
+  cursor: e-resize;
+}
 .blaze-pagination button {
   font-size: 0;
   width: 15px;
@@ -770,13 +772,13 @@ body {
   border-radius: 50%;
   outline: none;
   border: none;
-  background: hsl(185.03deg 69.96% 34.48%);
+  background: hsl(185.03deg 100% 84.76%);
   cursor: pointer;
   transition: transform 200ms ease, background-color 300ms ease;
 }
 
 .blaze-pagination button.active {
-  background: #b1f2ff;
+  background: #00cbf3;
   transform: scale(1.3);
 }
 

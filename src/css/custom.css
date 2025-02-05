@@ -1,0 +1,15 @@
+.blaze-track-container {
+  cursor: e-resize;
+  box-shadow: 0 8px 16px #00000080;
+}
+.blaze-pagination button {
+  background: hsl(185.03deg 100% 84.76%);
+}
+
+.blaze-pagination button.active {
+  background: #00cbf3;
+}
+
+.jon-intro-bottom {
+  z-index: 9999;
+}
