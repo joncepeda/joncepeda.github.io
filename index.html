@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html lang="en">
+<html lang="en" class="is-loading">
  <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,10 +66,9 @@
       <div class="schoolbag"></div>
     </div>
   </div>
-  <!-- Fixed space background (behind hero + about) -->
-  <div class="space-bg" aria-hidden="true">
-    <img src="./src/images/space.webp?v=124" class="space-bg-img" alt="">
-    <div class="sky">
+  <div class="main-first fixed w-full h-screen">
+    <img src="./src/images/space.webp?v=124" class="parallax-img-bg fixed top-0 left-0 w-full h-screen z-0 object-cover" data-0="transform:scale(1);" data-6800="transform:scale(1);" data-7800="transform:scale(1.2);" alt="space image">
+    <div class="sky w-full absolute z-10" data-0="transform:scale(1);" data-7600="transform:scale(1);">
       <div class="star" style="top: 20%; left: 30%;"></div>
       <div class="star" style="top: 50%; left: 70%;"></div>
       <div class="star" style="top: 10%; left: 80%;"></div>
@@ -87,580 +86,595 @@
       <div class="star" style="top: 45%; left: 90%;"></div>
       <div class="star" style="top: 35%; left: 80%;"></div>
     </div>
-  </div>
-
-  <main class="site">
-    <!-- Hero -->
-    <section id="home" class="hero">
-      <div class="jon-greetings hero-content container mx-auto px-4">
-        <p class="patua-one w-full text-center text-2xl sm:text-4xl md:text-3xl lg:text-4xl text-slate-300">HELLO! I'M</p>
-        <h1 class="text-slate-100 w-full patua-one text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-lg">JONATHAN CEPEDA</h1>
-        <div class="jon-roles patua-one w-full text-xl md:text-2xl lg:text-3xl text-center h-9 sm:h-11">
-          <p class="text-slate-200">Front-End Developer</p>
-          <p class="text-slate-200" aria-hidden="true">Shopify Developer</p>
-        </div>
-        <a href="#about" class="scroll-down flex justify-center relative flex-col w-full items-center mt-2" aria-label="Scroll to about me">
-          <span class="text-slate-400 text-xs">scroll down</span>
-          <svg aria-hidden="true" fill="#ffffff" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-69.3 -69.3 468.60 468.60" xml:space="preserve" stroke="#ffffff" stroke-width="15.51" class="block">
+    <div class="container mx-auto h-screen relative">
+      <div class="jon-greetings relative grid justify-center items-center z-40 h-screen w-full left-0"
+        data-1800="opacity:1; top:0%"
+        data-2400="opacity: 0; top: -100vh;"
+        >
+        <div class="">
+          <p class="patua-one w-full text-center text-2xl sm:text-4xl md:text-3xl lg:text-4xl text-slate-300">HELLO! I'M</p>
+          <h1 class="text-slate-100	w-full patua-one text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-lg">JONATHAN CEPEDA</h1>
+          <div class="jon-roles relative patua-one overflow-hidden w-full text-xl md:text-2xl lg:text-3xl text-center h-9	sm:h-11">
+            <p class="text-slate-200 absolute w-full" data-0="top:0%; opacity: 1;" data-400="opacity:0">Front-End Developer</p>
+            <p class="text-slate-200 absolute w-full" data-600="top:-100%; opacity: 1;" data-800="top:0%;opacity: 1;" data-1200="opacity: 0;">Shopify Developer</p>
+          </div>
+          <div class="scroll-down flex justify-center relative flex-col w-full items-center mt-2" >
+            <p class="text-slate-400 text-xs ">scroll down</p>
+            <svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-69.3 -69.3 468.60 468.60" xml:space="preserve" stroke="#ffffff" stroke-width="15.51" class="block">
               <path id="XMLID_197_" d="M304.394,139.394l-139.39,139.393L25.607,139.393c-5.857-5.857-15.355-5.858-21.213,0.001 c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.394l149.996-150 c5.858-5.858,5.858-15.355,0-21.213C319.749,133.536,310.251,133.535,304.394,139.394z"/> <path id="XMLID_221_" d="M154.398,190.607c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.394l149.996-150 c5.858-5.858,5.858-15.355,0-21.213c-5.857-5.858-15.355-5.858-21.213,0l-139.39,139.393L25.607,19.393 c-5.857-5.858-15.355-5.858-21.213,0c-5.858,5.858-5.858,15.355,0,21.213L154.398,190.607z"/>
               </svg>
-        </a>
-      </div>
-      <div class="jon-image">
-        <img src="./src/images/jonBlue.webp" width="1600" height="1046" class="w-full sm:w-11/12 md:max-w-screen-sm lg:max-w-screen-md" alt="jon cepeda vector">
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="about">
-      <div class="container mx-auto px-5 max-w-3xl">
-        <h2 class="text-slate-200 star-jedi text-4xl sm:text-5xl md:text-6xl w-full text-center mb-8 md:mb-10">Who am i ?</h2>
-        <p class="text-slate-200 patua-one w-full text-justify sm:text-lg md:text-xl">
-          Experienced Shopify Developer and Front-End Developer over 10 years of
-          expertise in building and optimizing e-commerce platforms. Proficient in
-          HTML, CSS, JavaScript, and Liquid, with a strong background in creating
-          responsive and user-friendly interfaces. Skilled in customizing Shopify themes
-          and integrating third-party services to enhance online stores. Adept at
-          collaborating with cross-functional teams to deliver high-quality web solutions
-          and improve customer experiences.
-        </p>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="projects-section">
-      <div class="projects-clouds" aria-hidden="true">
-        <img src="./src/images/clouds/cloud 1.webp" class="cloud cloud-a" loading="lazy" alt="">
-        <img src="./src/images/clouds/cloud 4.webp" class="cloud cloud-b" loading="lazy" alt="">
-        <img src="./src/images/clouds/cloud 2.webp" class="cloud cloud-c" loading="lazy" alt="">
-      </div>
-      <div class="container mx-auto px-4 relative">
-        <div class="projects-header w-full text-center mb-8 md:mb-12">
-          <h2 class="text-slate-100 patua-one text-5xl lg:text-6xl drop-shadow-lg">My Projects</h2>
-          <p class="text-slate-100 text-md mt-2">
-            These are the websites that I handled. <br class="md:hidden">(updated Aug 2026)
-            <span class="block md:hidden text-xs font-bold text-slate-700 mt-1">(Tap a project for details)</span>
-            <span class="hidden md:block text-xs font-bold text-slate-700 mt-1">(Click a project for details)</span>
-          </p>
+          </div>
         </div>
+      </div>
+      <div class="jon-intro grid left-0 justify-center sm:justify-end lg:justify-center items-center z-40 h-full w-full top-0" 
+        data-2000="transform: scale(0)"
+        data-2400="opacity: 1;transform: scale(1);"
+        data-5400="opacity: 1;"
+        data-6400="opacity: 0;"
+        >
+        <div class="w-full sm:w-7/12 md:w-8/12 lg:w-full justify-self-center sm:justify-self-end md:justify-self-end lg:justify-self-center self-center sm:self-start xl:self-center pt-0 sm:pt-20 md:pt-15 lg:pt-32 xl:pt-0 sm:pr-10 xl:pr-0">
+          <p class="text-slate-200 star-jedi text-4xl sm:text-5xl md:text-6xl w-full text-center md:mb-10"
+            >Who am i ?</p>
+          <div class="text-slate-200 patua-one p-5 md:p-0 w-full md:max-w-screen-sm text-justify sm:text-lg md:text-xl">Experienced Shopify Developer and Front-End Developer over 10 years of
+              expertise in building and optimizing e-commerce platforms. Proficient in
+              HTML, CSS, JavaScript, and Liquid, with a strong background in creating
+              responsive and user-friendly interfaces. Skilled in customizing Shopify themes
+              and integrating third-party services to enhance online stores. Adept at
+              collaborating with cross-functional teams to deliver high-quality web solutions
+              and improve customer experiences.
+            </div>
+        </div>
+      </div>
+      <div class="jon-intro jon-intro-bottom grid left-0 justify-center items-center h-full w-full top-0" data-7200="opacity: 0;transform: scale(0)" data-7500="opacity: 1;transform: scale(1);" >
+        <div class="w-full sm:w-7/12 md:w-8/12 lg:w-full text-center justify-self-center">
+          <p class="text-slate-200 text-2xl sm:text-3xl md:text-4xl xl:text-5xl w-full text-center patua-one"
+            >Looking for a cool and hard-working Developer? Hire me!</p>
+            <span class="text-slate-300 text-md sm:text-md md:text-md lg:text-lg block xl:text-xl">Email me at: <a href="mailto:jon.jonathancepeda@gmail.com" class="underline">jon.jonathancepeda@gmail.com</a></span>
+            <span class="text-slate-300 text-md sm:text-md md:text-md lg:text-lg xl:text-xl block">Message me at: <a href="https://www.linkedin.com/in/joncepeda/" class="underline" target="_blank">linkedin@joncepeda</a></span>
+            <span class="text-slate-300 text-md sm:text-md md:text-md lg:text-lg xl:text-xl">View my <a href="https://joncepeda.github.io/src/file/Jonathan Cepeda - Web Developer.pdf" class="underline" target="_blank">resumé</a></span>
+        </div>
+      </div>
+      <div class="jon-image absolute bottom-0 left-0 ">
+        <img src="./src/images/jonBlue.webp" class="w-full sm:w-11/12 md:max-w-screen-sm lg:max-w-screen-md	" alt="jon cepeda vector">
+      </div>
+    </div>
+  </div>
+  <div class="main-clouds h-screen w-full overflow-hidden" data-2800="bottom: -100vh;" data-3200="bottom: 0;" data-5300="height: 100vh" data-5900="height: 0;" data-5910="height: 100vh"  data-7500="height: 100vh" data-7510="height: 0vh;">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 1.webp" data-2800="bottom: -100vh;" data-4800="bottom: 100vh;" data-5900="bottom: 100vh;" data-7000="bottom: -100vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 1.webp" data-2800="bottom: -100vh;left: 30%;" data-4800="bottom: 110vh;"  data-5900="bottom: 110vh;" data-7070="bottom: -100vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 1.webp" data-3200="bottom: -100vh;right: 30%;" data-4800="bottom: 100vh;" data-5900="bottom: 100vh;" data-7050="bottom: -120vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 1.webp" data-3500="bottom: -99vh; " data-4800="bottom: 120vh;" data-6000="bottom: 100vh; right: 0;" data-7070="bottom: -120vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 1.webp" data-2800="bottom: -96vh;  right: 50%;" data-4800="bottom: 120vh;" data-6000="bottom: 100vh; right: 0%;" data-7070="bottom: -100vh;"  alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 2.webp" data-3100="bottom: -94vh;" data-4900="bottom: 150vh;" data-6200="bottom: 100vh; right: 0%;" data-7050="bottom: -110vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 3.webp" data-3200="bottom: -93vh;" data-4600="bottom: 150vh;" data-6200="bottom: 100vh; right: 0%;" data-7050="bottom: -112vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 3.webp" data-2800="bottom: -100vh;  right:80%;" data-4800="bottom: 130vh;" data-6400="bottom: 100vh; right:0%; " data-7200="bottom: -110vh;"  alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 3.webp" data-2800="bottom: -99vh;  left: 80%;" data-4800="bottom: 120vh;" data-6500="bottom: 100vh; right: 0%;" data-7050="bottom: -111vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 4.webp" data-3500="bottom: -98vh;" data-4700="bottom: 120vh;" data-6100="bottom: 100vh; right: 0%;" data-7070="bottom: -115vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 2.webp" data-3400="bottom: -89vh;" data-4900="bottom: 150vh;" data-6100="bottom: 100vh; right: 0%;" data-7070="bottom: -111vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 2.webp" data-2800="bottom: -95vh; right:80%;" data-4400="bottom: 100vh;" data-6000="bottom: 90vh; " data-7070="bottom: -120vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 2.webp" data-2800="bottom: -90vh; left:52%;" data-4300="bottom: 100vh;" data-6000="bottom: 90vh; right: 0%;" data-7000="bottom: -120vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 4.webp" data-3300="bottom: -120vh; left:52%;" data-4500="bottom: 120vh;" data-6100="bottom: 100vh; right: 0%;" data-7200="bottom: -110vh;" alt="clouds">
+    <img class="max-w-screen-sm md:max-w-full" src="./src/images/clouds/cloud 4.webp" data-3100="bottom: -100vh; right:52%;" data-4300="bottom: 120vh;" data-6300="bottom: 100vh; " data-7000="bottom: -120vh;"  alt="clouds">
+  </div>
+  <div class="main-second h-screen w-full overflow-hidden" data-3600="bottom: -100vh;"  data-4300="bottom: 0; " data-4900="z-index:109" data-5200="z-index:111" data-5800="z-index:111" data-5850="z-index:109" data-6500="bottom: 0vh;" data-6700="bottom: -110vh;">
+    <div class="project-overlay-top absolute w-full h-2/6	 left-0 top-0"></div>
+    <div class=" w-full text-center" data-4300="opacity: 0; top: -32px;" data-5000="opacity:1; top: 32px;" data-5800="opacity: 1;" data-7100="opacity: 0;" >
+      <span class="text-slate-100 patua-one text-5xl lg:text-6xl drop-shadow-lg">My Projects</span>
+      <div class="text-slate-200 text-md" data-4400="opacity:0;" data-4700="opacity:1; ">
+        These are the websites that I handled. <br class="md:hidden">(updated Aug 2026)
+        <span class="text-slate-800 block text-xs font-bold md:hidden">(Swipe up for more, tap a project for details)</span>
+        <span class="text-slate-800 hidden md:block text-xs font-bold">(Scroll inside for more, click a project for details)</span>
+      </div>
+    </div>
+    <div class="projects relative grid grid-cols-1 w-full items-center h-screen justify-center md:mt-10 sm:mt-0 " data-4900="opacity:0;" data-5200="opacity:1;" >
+      <div class="projects-slider-wrapper p-4 md:p-0 w-full">
         <div class="projects-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          <!-- Mr Green Mind -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.mrgreenmind.com/" data-image="./src/images/projects/thumbs/mrgreenmind.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/mrgreenmind.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/mrgreenmind-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Mr Green Mind website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Mr Green Mind</h3>
-              <span class="project-card-hint">View details</span>
+            <!-- Mr Green Mind -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.mrgreenmind.com/" data-image="./src/images/projects/thumbs/mrgreenmind.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/mrgreenmind.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/mrgreenmind-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Mr Green Mind website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Mr Green Mind</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Built a custom Shopify storefront from the ground up, translating the Figma designs into a fast, fully responsive theme.</p>
+                <ul>
+                  <li>Developed the theme from scratch in Liquid, faithfully implementing the Figma designs.</li>
+                  <li>Built custom sections and blocks for the product page and cart drawer to lift conversion rates.</li>
+                  <li>Delivered a responsive layout across mobile, tablet, and desktop.</li>
+                  <li>Optimised page speed and front-end performance.</li>
+                </ul>
+              </template>
             </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+            <!-- Ghaya Lifestyle -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.ghayalifestyle.com/collections/volledige-set/products/leather-ring-binder-organiser-a5-combi" data-image="./src/images/projects/thumbs/ghaya-lifestyle-pdp.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/ghaya-lifestyle-pdp.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/ghaya-lifestyle-pdp-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Ghaya Lifestyle website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Ghaya Lifestyle</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Enhanced the product detail experience, focusing on clearer content and a conversion-driven layout.</p>
+                <ul>
+                  <li>Restructured product page content and sections for clearer product storytelling.</li>
+                  <li>Built conversion-focused blocks for the product page.</li>
+                  <li>Ensured a consistent responsive experience across devices.</li>
+                  <li>Improved page performance.</li>
+                </ul>
+              </template>
             </div>
-            <template class="project-details">
-              <p>Built a custom Shopify storefront from the ground up, translating the Figma designs into a fast, fully responsive theme.</p>
-              <ul>
-                <li>Developed the theme from scratch in Liquid, faithfully implementing the Figma designs.</li>
-                <li>Built custom sections and blocks for the product page and cart drawer to lift conversion rates.</li>
-                <li>Delivered a responsive layout across mobile, tablet, and desktop.</li>
-                <li>Optimised page speed and front-end performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Ghaya Lifestyle -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.ghayalifestyle.com/collections/volledige-set/products/leather-ring-binder-organiser-a5-combi" data-image="./src/images/projects/thumbs/ghaya-lifestyle-pdp.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/ghaya-lifestyle-pdp.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/ghaya-lifestyle-pdp-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Ghaya Lifestyle website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Ghaya Lifestyle</h3>
-              <span class="project-card-hint">View details</span>
+            <!-- Unblue -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.unblue.com/" data-image="./src/images/projects/thumbs/unblue.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/unblue.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/unblue-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Unblue website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Unblue</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Turned Figma designs into interactive Shopify pages and extended the theme with custom, merchant-editable sections.</p>
+                <ul>
+                  <li>Converted Figma designs into interactive, pixel-accurate pages.</li>
+                  <li>Built custom sections to extend and improve existing pages.</li>
+                  <li>Developed conversion-focused blocks for the product page.</li>
+                  <li>Implemented a fully responsive layout.</li>
+                  <li>Optimised page performance.</li>
+                </ul>
+              </template>
             </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+            <!-- Deleca -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.deleca.com/" data-image="./src/images/projects/thumbs/deleca.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/deleca.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/deleca-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Deleca website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Deleca</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Extended the Shopify theme with custom templates and cart features aimed at increasing conversion and average order value.</p>
+                <ul>
+                  <li>Built custom product page sections to improve conversion.</li>
+                  <li>Added a free-gift progress bar and a related-products carousel to the cart drawer.</li>
+                  <li>Created custom Shopify sections and templates.</li>
+                  <li>Optimised page performance.</li>
+                </ul>
+              </template>
             </div>
-            <template class="project-details">
-              <p>Enhanced the product detail experience, focusing on clearer content and a conversion-driven layout.</p>
-              <ul>
-                <li>Restructured product page content and sections for clearer product storytelling.</li>
-                <li>Built conversion-focused blocks for the product page.</li>
-                <li>Ensured a consistent responsive experience across devices.</li>
-                <li>Improved page performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Unblue -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.unblue.com/" data-image="./src/images/projects/thumbs/unblue.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/unblue.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/unblue-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Unblue website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Unblue</h3>
-              <span class="project-card-hint">View details</span>
+            <!-- Ubergames -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.ubergames.com/" data-image="./src/images/projects/thumbs/ubergames.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/ubergames.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/ubergames-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Ubergames website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Ubergames</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Improved the product page experience with custom sections and variant-aware product media.</p>
+                <ul>
+                  <li>Built custom product page sections to improve conversion.</li>
+                  <li>Wrote a custom script that updates the product gallery to match the selected colour variant.</li>
+                  <li>Created custom Shopify sections and templates.</li>
+                  <li>Optimised page performance.</li>
+                </ul>
+              </template>
             </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+            <!-- Enclave BioActives -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.enclavebioactives.com/" data-image="./src/images/projects/thumbs/enclave.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/enclave.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/enclave-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Enclave BioActives website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Enclave BioActives</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Built a custom Shopify theme from scratch based on the brand’s Figma designs.</p>
+                <ul>
+                  <li>Converted the Figma designs into a production Shopify theme.</li>
+                  <li>Hand-coded all templates and sections from scratch.</li>
+                  <li>Implemented a fully responsive layout.</li>
+                  <li>Optimised page performance.</li>
+                </ul>
+              </template>
             </div>
-            <template class="project-details">
-              <p>Turned Figma designs into interactive Shopify pages and extended the theme with custom, merchant-editable sections.</p>
-              <ul>
-                <li>Converted Figma designs into interactive, pixel-accurate pages.</li>
-                <li>Built custom sections to extend and improve existing pages.</li>
-                <li>Developed conversion-focused blocks for the product page.</li>
-                <li>Implemented a fully responsive layout.</li>
-                <li>Optimised page performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Deleca -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.deleca.com/" data-image="./src/images/projects/thumbs/deleca.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/deleca.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/deleca-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Deleca website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Deleca</h3>
-              <span class="project-card-hint">View details</span>
+            <!-- Norderlichtz -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.norderlichtz.com/" data-image="./src/images/projects/thumbs/norderlichtz.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/norderlichtz.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/norderlichtz-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Norderlichtz website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Norderlichtz</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Converted Figma designs into interactive Shopify pages and extended the store with custom sections.</p>
+                <ul>
+                  <li>Converted Figma designs into interactive, pixel-accurate pages.</li>
+                  <li>Built custom sections to extend and improve existing pages.</li>
+                  <li>Implemented a fully responsive layout.</li>
+                  <li>Optimised page performance.</li>
+                </ul>
+              </template>
             </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+            <!-- Emma -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://emmarelief.com/products/emma-pdp/" data-image="./src/images/projects/thumbs/emmarelief.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/emmarelief.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/emmarelief-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Emma website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Emma</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Developed a custom, conversion-focused product page from Figma designs.</p>
+                <ul>
+                  <li>Converted the Figma designs into a Shopify product page.</li>
+                  <li>Hand-coded the page and its sections from scratch.</li>
+                  <li>Implemented a fully responsive layout.</li>
+                  <li>Optimised page performance.</li>
+                </ul>
+              </template>
             </div>
-            <template class="project-details">
-              <p>Extended the Shopify theme with custom templates and cart features aimed at increasing conversion and average order value.</p>
-              <ul>
-                <li>Built custom product page sections to improve conversion.</li>
-                <li>Added a free-gift progress bar and a related-products carousel to the cart drawer.</li>
-                <li>Created custom Shopify sections and templates.</li>
-                <li>Optimised page performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Ubergames -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.ubergames.com/" data-image="./src/images/projects/thumbs/ubergames.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/ubergames.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/ubergames-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Ubergames website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Ubergames</h3>
-              <span class="project-card-hint">View details</span>
+            <!-- Elimipure -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://elimipure.com/pages/product/" data-image="./src/images/projects/thumbs/elimipure.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/elimipure.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/elimipure-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Elimipure website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Elimipure</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-slate-800 text-slate-100 px-1 font-bold">CORPORATE SITE</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+              </div>
+              <template class="project-details">
+                <p>Built a standalone product landing page from Figma designs using hand-coded HTML, CSS, and JavaScript.</p>
+                <ul>
+                  <li>Converted the Figma designs into a production-ready landing page.</li>
+                  <li>Hand-coded the page from scratch without a framework.</li>
+                  <li>Implemented a fully responsive layout.</li>
+                  <li>Optimised page performance.</li>
+                </ul>
+              </template>
             </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+            <!-- Akka -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://tryakka.com/" data-image="./src/images/projects/thumbs/tryakka.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/tryakka.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/tryakka-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Akka website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Akka</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-slate-800 text-slate-100 px-1 font-bold">CORPORATE SITE</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+              </div>
+              <template class="project-details">
+                <p>Developed a product funnel page from Figma designs, hand-coded from scratch.</p>
+                <ul>
+                  <li>Converted the Figma designs into a product funnel page.</li>
+                  <li>Hand-coded the page from scratch in HTML, CSS, and JavaScript.</li>
+                </ul>
+              </template>
             </div>
-            <template class="project-details">
-              <p>Improved the product page experience with custom sections and variant-aware product media.</p>
-              <ul>
-                <li>Built custom product page sections to improve conversion.</li>
-                <li>Wrote a custom script that updates the product gallery to match the selected colour variant.</li>
-                <li>Created custom Shopify sections and templates.</li>
-                <li>Optimised page performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Enclave BioActives -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.enclavebioactives.com/" data-image="./src/images/projects/thumbs/enclave.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/enclave.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/enclave-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Enclave BioActives website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Enclave BioActives</h3>
-              <span class="project-card-hint">View details</span>
+            <!-- TrySofon -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://trysofon.com/" data-image="./src/images/projects/thumbs/trysofon.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/trysofon.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/trysofon-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="TrySofon website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">TrySofon</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-slate-800 text-slate-100 px-1 font-bold">CORPORATE SITE</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+              </div>
+              <template class="project-details">
+                <p>Built a product landing page from Figma designs using hand-coded HTML, CSS, and JavaScript.</p>
+                <ul>
+                  <li>Converted the Figma designs into a production-ready landing page.</li>
+                  <li>Hand-coded the page from scratch without a framework.</li>
+                  <li>Implemented a fully responsive layout.</li>
+                  <li>Optimised web performance.</li>
+                </ul>
+              </template>
             </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+            <!-- Canvas Beauty HK -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://canvasbeauty-hk.myshopify.com/" data-image="./src/images/projects/thumbs/canvashk.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/canvashk.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/canvashk-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Canvas Beauty HK website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Canvas Beauty HK</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Delivered a broad set of storefront enhancements, from merchandising features to a store locator.</p>
+                <ul>
+                  <li>Added text badges to product cards.</li>
+                  <li>Added product recommendations to the cart drawer and cart page.</li>
+                  <li>Integrated a wishlist app, with wishlist buttons on product cards and product pages.</li>
+                  <li>Built a product slider section driven by a selected collection.</li>
+                  <li>Built a mega menu with images that adapts to smaller screens.</li>
+                  <li>Added collapsible product page sections powered by product metafields.</li>
+                  <li>Created a store locator page with locations plotted on Google Maps.</li>
+                  <li>Refined content alignment across sections.</li>
+                </ul>
+              </template>
             </div>
-            <template class="project-details">
-              <p>Built a custom Shopify theme from scratch based on the brand’s Figma designs.</p>
-              <ul>
-                <li>Converted the Figma designs into a production Shopify theme.</li>
-                <li>Hand-coded all templates and sections from scratch.</li>
-                <li>Implemented a fully responsive layout.</li>
-                <li>Optimised page performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Norderlichtz -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.norderlichtz.com/" data-image="./src/images/projects/thumbs/norderlichtz.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/norderlichtz.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/norderlichtz-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Norderlichtz website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Norderlichtz</h3>
-              <span class="project-card-hint">View details</span>
+            <!-- Wedgwood -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://wedgwood.com.hk/" data-image="./src/images/projects/thumbs/wedgewood.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/wedgewood.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/wedgewood-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Wedgwood website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Wedgwood</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Polished the storefront’s visual consistency and improved the purchase flow for out-of-stock products.</p>
+                <ul>
+                  <li>Standardised homepage section alignment and product card image sizing.</li>
+                  <li>Introduced global style updates for buttons, typography, and product card spacing.</li>
+                  <li>Redesigned the pagination controls.</li>
+                  <li>Replaced Add to Cart with a back-in-stock subscription form for out-of-stock products.</li>
+                  <li>Updated the store policy pages.</li>
+                </ul>
+              </template>
             </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+            <!-- EcoFlow (South Africa) -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://za.ecoflow.com/" data-image="./src/images/projects/thumbs/ecoflow-za.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/ecoflow-za.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/ecoflow-za-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="EcoFlow (South Africa) website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">EcoFlow (South Africa)</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Customised the checkout and promotional content for the South African store.</p>
+                <ul>
+                  <li>Extended the checkout with an additional address field via JavaScript.</li>
+                  <li>Integrated an API lookup that fills in the correct suburb and postal code as customers type.</li>
+                  <li>Built new pages to showcase promotions.</li>
+                </ul>
+              </template>
             </div>
-            <template class="project-details">
-              <p>Converted Figma designs into interactive Shopify pages and extended the store with custom sections.</p>
-              <ul>
-                <li>Converted Figma designs into interactive, pixel-accurate pages.</li>
-                <li>Built custom sections to extend and improve existing pages.</li>
-                <li>Implemented a fully responsive layout.</li>
-                <li>Optimised page performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Emma -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://emmarelief.com/products/emma-pdp/" data-image="./src/images/projects/thumbs/emmarelief.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/emmarelief.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/emmarelief-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Emma website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Emma</h3>
-              <span class="project-card-hint">View details</span>
+            <!-- iPrimo HK -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://onlineshop.iprimo.hk/" data-image="./src/images/projects/thumbs/iprimo.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/iprimo.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/iprimo-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="iPrimo HK website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">iPrimo HK</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Added merchandising and shopping-experience features across the storefront.</p>
+                <ul>
+                  <li>Integrated a wishlist app.</li>
+                  <li>Extended the hero slider to support text on each slide.</li>
+                  <li>Added badges to product cards.</li>
+                  <li>Restyled the Add to Cart button sitewide.</li>
+                  <li>Improved the existing slider for smoother scrolling.</li>
+                  <li>Added a hover quick view with Add to Cart on product cards.</li>
+                </ul>
+              </template>
             </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+            <!-- Cafuné -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.ca-fune.com/" data-image="./src/images/projects/thumbs/cafune.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/cafune.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/cafune-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Cafuné website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Cafuné</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
+              </div>
+              <template class="project-details">
+                <p>Implemented navigation, merchandising, and cart improvements across the Shopify theme.</p>
+                <ul>
+                  <li>Added image panels to the dropdown menu.</li>
+                  <li>Added product badges to product cards.</li>
+                  <li>Fixed swatch images on product cards.</li>
+                  <li>Improved the layout of the product page collapsible content.</li>
+                  <li>Added a consent checkbox to the cart drawer before checkout.</li>
+                  <li>Added theme settings for uploading videos that play automatically.</li>
+                  <li>Added a product metafield to control the displayed product image.</li>
+                </ul>
+              </template>
             </div>
-            <template class="project-details">
-              <p>Developed a custom, conversion-focused product page from Figma designs.</p>
-              <ul>
-                <li>Converted the Figma designs into a Shopify product page.</li>
-                <li>Hand-coded the page and its sections from scratch.</li>
-                <li>Implemented a fully responsive layout.</li>
-                <li>Optimised page performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Elimipure -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://elimipure.com/pages/product/" data-image="./src/images/projects/thumbs/elimipure.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/elimipure.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/elimipure-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Elimipure website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Elimipure</h3>
-              <span class="project-card-hint">View details</span>
+            <!-- Experienced Travellers -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.experiencedtravellers.com/" data-image="./src/images/projects/thumbs/experienced-travellers.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/experienced-travellers.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/experienced-travellers-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Experienced Travellers website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Experienced Travellers</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-sky-500 text-slate-900 px-1 font-bold">WORDPRESS</span>
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-purple-400 text-slate-100 px-1 font-bold">PHP</span>
+                <span class="rounded-lg font-sans bg-blue-300 text-slate-100 px-1 font-bold">JQUERY</span>
+              </div>
+              <template class="project-details">
+                <p>Built a custom WordPress site from scratch, integrating live data from the company’s own software.</p>
+                <ul>
+                  <li>Built the site from scratch on WordPress.</li>
+                  <li>Created custom REST API endpoints with register_rest_route.</li>
+                  <li>Registered custom post types.</li>
+                  <li>Wrote scripts that fetch data from the company’s software through its API.</li>
+                  <li>Built sections that showcase travel agent profiles.</li>
+                  <li>Added admin fields so staff can manage travel promotions and agent discounts.</li>
+                  <li>Added tabbed content organised by country.</li>
+                </ul>
+              </template>
             </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-slate-800 text-slate-100 px-1 font-bold">CORPORATE SITE</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+            <!-- Get A Flight -->
+            <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.getaflight.co.uk/" data-image="./src/images/projects/thumbs/getaflight.webp">
+              <picture class="project-card-picture">
+                <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/getaflight.webp" width="800" height="1080">
+                <img src="./src/images/projects/thumbs/getaflight-mob.webp" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Get A Flight website screenshot">
+              </picture>
+              <div class="project-card-overlay">
+                <h3 class="project-card-title patua-one">Get A Flight</h3>
+                <span class="project-card-hint">View details</span>
+              </div>
+              <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
+                <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
+                <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
+                <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
+                <span class="rounded-lg font-sans bg-purple-400 text-slate-100 px-1 font-bold">PHP</span>
+                <span class="rounded-lg font-sans bg-blue-300 text-slate-100 px-1 font-bold">JQUERY</span>
+              </div>
+              <template class="project-details">
+                <p>Enhanced a PHP travel booking site with search tools and customer trust signals.</p>
+                <ul>
+                  <li>Built homepage tabs for Flights, Hotels, and Car Hire.</li>
+                  <li>Added scripts to search flight and hotel availability.</li>
+                  <li>Reworked the flight search results layout with expandable detail panels.</li>
+                  <li>Added a Trustpilot section showing the agency’s reviews.</li>
+                </ul>
+              </template>
             </div>
-            <template class="project-details">
-              <p>Built a standalone product landing page from Figma designs using hand-coded HTML, CSS, and JavaScript.</p>
-              <ul>
-                <li>Converted the Figma designs into a production-ready landing page.</li>
-                <li>Hand-coded the page from scratch without a framework.</li>
-                <li>Implemented a fully responsive layout.</li>
-                <li>Optimised page performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Akka -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://tryakka.com/" data-image="./src/images/projects/thumbs/tryakka.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/tryakka.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/tryakka-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Akka website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Akka</h3>
-              <span class="project-card-hint">View details</span>
-            </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-slate-800 text-slate-100 px-1 font-bold">CORPORATE SITE</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-            </div>
-            <template class="project-details">
-              <p>Developed a product funnel page from Figma designs, hand-coded from scratch.</p>
-              <ul>
-                <li>Converted the Figma designs into a product funnel page.</li>
-                <li>Hand-coded the page from scratch in HTML, CSS, and JavaScript.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- TrySofon -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://trysofon.com/" data-image="./src/images/projects/thumbs/trysofon.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/trysofon.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/trysofon-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="TrySofon website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">TrySofon</h3>
-              <span class="project-card-hint">View details</span>
-            </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-slate-800 text-slate-100 px-1 font-bold">CORPORATE SITE</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-            </div>
-            <template class="project-details">
-              <p>Built a product landing page from Figma designs using hand-coded HTML, CSS, and JavaScript.</p>
-              <ul>
-                <li>Converted the Figma designs into a production-ready landing page.</li>
-                <li>Hand-coded the page from scratch without a framework.</li>
-                <li>Implemented a fully responsive layout.</li>
-                <li>Optimised web performance.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Canvas Beauty HK -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://canvasbeauty-hk.myshopify.com/" data-image="./src/images/projects/thumbs/canvashk.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/canvashk.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/canvashk-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Canvas Beauty HK website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Canvas Beauty HK</h3>
-              <span class="project-card-hint">View details</span>
-            </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
-            </div>
-            <template class="project-details">
-              <p>Delivered a broad set of storefront enhancements, from merchandising features to a store locator.</p>
-              <ul>
-                <li>Added text badges to product cards.</li>
-                <li>Added product recommendations to the cart drawer and cart page.</li>
-                <li>Integrated a wishlist app, with wishlist buttons on product cards and product pages.</li>
-                <li>Built a product slider section driven by a selected collection.</li>
-                <li>Built a mega menu with images that adapts to smaller screens.</li>
-                <li>Added collapsible product page sections powered by product metafields.</li>
-                <li>Created a store locator page with locations plotted on Google Maps.</li>
-                <li>Refined content alignment across sections.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Wedgwood -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://wedgwood.com.hk/" data-image="./src/images/projects/thumbs/wedgewood.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/wedgewood.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/wedgewood-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Wedgwood website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Wedgwood</h3>
-              <span class="project-card-hint">View details</span>
-            </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
-            </div>
-            <template class="project-details">
-              <p>Polished the storefront’s visual consistency and improved the purchase flow for out-of-stock products.</p>
-              <ul>
-                <li>Standardised homepage section alignment and product card image sizing.</li>
-                <li>Introduced global style updates for buttons, typography, and product card spacing.</li>
-                <li>Redesigned the pagination controls.</li>
-                <li>Replaced Add to Cart with a back-in-stock subscription form for out-of-stock products.</li>
-                <li>Updated the store policy pages.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- EcoFlow (South Africa) -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://za.ecoflow.com/" data-image="./src/images/projects/thumbs/ecoflow-za.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/ecoflow-za.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/ecoflow-za-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="EcoFlow (South Africa) website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">EcoFlow (South Africa)</h3>
-              <span class="project-card-hint">View details</span>
-            </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
-            </div>
-            <template class="project-details">
-              <p>Customised the checkout and promotional content for the South African store.</p>
-              <ul>
-                <li>Extended the checkout with an additional address field via JavaScript.</li>
-                <li>Integrated an API lookup that fills in the correct suburb and postal code as customers type.</li>
-                <li>Built new pages to showcase promotions.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- iPrimo HK -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://onlineshop.iprimo.hk/" data-image="./src/images/projects/thumbs/iprimo.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/iprimo.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/iprimo-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="iPrimo HK website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">iPrimo HK</h3>
-              <span class="project-card-hint">View details</span>
-            </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
-            </div>
-            <template class="project-details">
-              <p>Added merchandising and shopping-experience features across the storefront.</p>
-              <ul>
-                <li>Integrated a wishlist app.</li>
-                <li>Extended the hero slider to support text on each slide.</li>
-                <li>Added badges to product cards.</li>
-                <li>Restyled the Add to Cart button sitewide.</li>
-                <li>Improved the existing slider for smoother scrolling.</li>
-                <li>Added a hover quick view with Add to Cart on product cards.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Cafuné -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.ca-fune.com/" data-image="./src/images/projects/thumbs/cafune.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/cafune.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/cafune-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Cafuné website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Cafuné</h3>
-              <span class="project-card-hint">View details</span>
-            </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-lime-500 text-slate-900 px-1 font-bold">SHOPIFY</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-blue-400 text-slate-100 px-1 font-bold">LIQUID</span>
-            </div>
-            <template class="project-details">
-              <p>Implemented navigation, merchandising, and cart improvements across the Shopify theme.</p>
-              <ul>
-                <li>Added image panels to the dropdown menu.</li>
-                <li>Added product badges to product cards.</li>
-                <li>Fixed swatch images on product cards.</li>
-                <li>Improved the layout of the product page collapsible content.</li>
-                <li>Added a consent checkbox to the cart drawer before checkout.</li>
-                <li>Added theme settings for uploading videos that play automatically.</li>
-                <li>Added a product metafield to control the displayed product image.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Experienced Travellers -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.experiencedtravellers.com/" data-image="./src/images/projects/thumbs/experienced-travellers.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/experienced-travellers.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/experienced-travellers-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Experienced Travellers website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Experienced Travellers</h3>
-              <span class="project-card-hint">View details</span>
-            </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-sky-500 text-slate-900 px-1 font-bold">WORDPRESS</span>
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-purple-400 text-slate-100 px-1 font-bold">PHP</span>
-              <span class="rounded-lg font-sans bg-blue-300 text-slate-100 px-1 font-bold">JQUERY</span>
-            </div>
-            <template class="project-details">
-              <p>Built a custom WordPress site from scratch, integrating live data from the company’s own software.</p>
-              <ul>
-                <li>Built the site from scratch on WordPress.</li>
-                <li>Created custom REST API endpoints with register_rest_route.</li>
-                <li>Registered custom post types.</li>
-                <li>Wrote scripts that fetch data from the company’s software through its API.</li>
-                <li>Built sections that showcase travel agent profiles.</li>
-                <li>Added admin fields so staff can manage travel promotions and agent discounts.</li>
-                <li>Added tabbed content organised by country.</li>
-              </ul>
-            </template>
-          </div>
-          <!-- Get A Flight -->
-          <div class="project-card" role="button" tabindex="0" aria-haspopup="dialog" data-url="https://www.getaflight.co.uk/" data-image="./src/images/projects/thumbs/getaflight.webp">
-            <picture class="project-card-picture">
-              <source media="(min-width: 768px)" srcset="./src/images/projects/thumbs/getaflight.webp" width="800" height="1080">
-              <img src="./src/images/projects/thumbs/getaflight-mob.webp" loading="lazy" decoding="async" class="project-card-img object-cover h-full w-full object-top" alt="Get A Flight website screenshot">
-            </picture>
-            <div class="project-card-overlay">
-              <h3 class="project-card-title patua-one">Get A Flight</h3>
-              <span class="project-card-hint">View details</span>
-            </div>
-            <div class="project-card-tags card-tags flex justify-start flex-wrap gap-2">
-              <span class="rounded-lg font-sans bg-orange-500 text-slate-900 px-1 font-bold">HTML</span>
-              <span class="rounded-lg font-sans bg-blue-500 text-slate-100 px-1 font-bold">CSS</span>
-              <span class="rounded-lg font-sans bg-yellow-400 text-slate-900 px-1 font-bold">JAVASCRIPT</span>
-              <span class="rounded-lg font-sans bg-purple-400 text-slate-100 px-1 font-bold">PHP</span>
-              <span class="rounded-lg font-sans bg-blue-300 text-slate-100 px-1 font-bold">JQUERY</span>
-            </div>
-            <template class="project-details">
-              <p>Enhanced a PHP travel booking site with search tools and customer trust signals.</p>
-              <ul>
-                <li>Built homepage tabs for Flights, Hotels, and Car Hire.</li>
-                <li>Added scripts to search flight and hotel availability.</li>
-                <li>Reworked the flight search results layout with expandable detail panels.</li>
-                <li>Added a Trustpilot section showing the agency’s reviews.</li>
-              </ul>
-            </template>
-          </div>
         </div>
       </div>
-      <div class="blaze-cat" aria-hidden="true">
-        <div>
-          <span class="bg-white patua-one text-md text-right px-2 py-1 rounded-sm shadow-md">Scroll down more! Miiiiiiiiiiaoooooooowwwww!!</span>
-          <img src="./src/images/cat-small.webp" width="200" height="409" loading="lazy" alt="">
-        </div>
+    </div>
+    <div class="blaze-cat absolute right-0 top-0 z-10">
+      <div>
+        <span class="bg-white patua-one text-md text-right px-2 py-1 rounded-sm shadow-md">Scroll down more! Miiiiiiiiiiaoooooooowwwww!!</span>
+        <img src="./src/images/cat-small.webp" alt="jon cepeda cat"/>
       </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact-section">
-      <div class="container mx-auto px-4 text-center relative">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl w-full text-center patua-one mb-4">Looking for a cool and hard-working Developer? Hire me!</h2>
-        <span class="text-md lg:text-lg xl:text-xl block">Email me at: <a href="mailto:jon.jonathancepeda@gmail.com" class="underline">jon.jonathancepeda@gmail.com</a></span>
-        <span class="text-md lg:text-lg xl:text-xl block">Message me at: <a href="https://www.linkedin.com/in/joncepeda/" class="underline" target="_blank" rel="noopener">linkedin@joncepeda</a></span>
-        <span class="text-md lg:text-lg xl:text-xl block">View my <a href="https://joncepeda.github.io/src/file/Jonathan Cepeda - Web Developer.pdf" class="underline" target="_blank" rel="noopener">resumé</a></span>
-      </div>
-      <img src="./src/images/landscape-cropped.webp" width="3200" height="850" class="contact-mountains" loading="lazy" alt="cordillera mountains nueva ecija">
-    </section>
-  </main>
-
+    </div>
+    <img src="./src/images/landscape-cropped.webp" class="project-landcropped-img w-full object-cover object-bottom-center h-3/6" data-4200="bottom: -50%;" data-4500="bottom: -20%" alt=" cordillera mountains nueva ecija"> 
+  </div>
   <!-- Project details modal -->
   <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" hidden>
     <div class="project-modal-backdrop" data-close></div>
@@ -675,6 +689,7 @@
       </div>
     </div>
   </div>
+  <script src="src/js/skrollr.min.js" defer></script>
   <script  type="text/javascript">
     // Runs the callback once every asset (images, CSS, scripts) has finished
     // loading. Failed assets still count as "done", so a broken image can't
@@ -694,9 +709,29 @@
       if (maxWaitMs) setTimeout(run, maxWaitMs);
     }
 
+    // While the loader is showing, the page can't be scrolled (see .is-loading
+    // in custom.css). On phones skrollr scrolls the page from touch events
+    // itself, so those are held back here until loading is done.
+    function stopTouchWhileLoading(e) {
+      if (!document.documentElement.classList.contains('is-loading')) return;
+      e.stopPropagation();
+      if (e.cancelable) e.preventDefault();
+    }
+    window.addEventListener('touchstart', stopTouchWhileLoading, { capture: true, passive: false });
+    window.addEventListener('touchmove', stopTouchWhileLoading, { capture: true, passive: false });
+
+    function enablePageScroll() {
+      document.documentElement.classList.remove('is-loading');
+      window.removeEventListener('touchstart', stopTouchWhileLoading, { capture: true });
+      window.removeEventListener('touchmove', stopTouchWhileLoading, { capture: true });
+    }
+
     function hideMainLoader() {
       const loaderDiv = document.querySelector(".main-loader");
-      if (!loaderDiv) return;
+      if (!loaderDiv) {
+        enablePageScroll();
+        return;
+      }
       const astronaut = loaderDiv.querySelector(".astronaut");
       setTimeout(() => {
         if (astronaut) astronaut.style.top = '-100%';
@@ -704,6 +739,7 @@
           loaderDiv.style.opacity = 0;
           setTimeout(() => {
             loaderDiv.style.display = 'none';
+            enablePageScroll();
           }, 1200);
         }, 1000);
       }, 1500);
@@ -715,7 +751,22 @@
       try { fn(); } catch (err) { console.error('[init] ' + label + ' failed:', err); }
     }
 
-    checkAllAssetsLoaded(hideMainLoader, 15000);
+    checkAllAssetsLoaded(function() {
+      safely('skrollr', () => {
+        skrollr.init({ smoothScrolling: true });
+      });
+
+      safely('scroll-down button', () => {
+        const scrollDownButton = document.querySelector(".scroll-down svg");
+        if (scrollDownButton) {
+          scrollDownButton.addEventListener('click', () => window.scrollBy(0, 800));
+        }
+      });
+
+      safely('projects grid', initProjectsGrid);
+
+      hideMainLoader();
+    }, 15000);
 
     // Project details modal: opens when a project card is clicked / tapped.
     function initProjectModal() {
@@ -782,18 +833,75 @@
 
     safely('project modal', initProjectModal);
 
-    // The cat pops up when the last row of projects scrolls into view.
-    function initProjectsCat() {
+    // Projects grid: scrolls inside its pinned section (see custom.css).
+    function initProjectsGrid() {
+      const wrapper = document.querySelector('.projects-slider-wrapper');
       const cat = document.querySelector('.blaze-cat');
-      const cards = document.querySelectorAll('.projects-grid .project-card');
-      if (!cat || !cards.length || !('IntersectionObserver' in window)) return;
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => cat.classList.toggle('active', entry.isIntersecting));
-      }, { threshold: 0.5 });
-      observer.observe(cards[cards.length - 1]);
-    }
+      if (!wrapper) return;
 
-    safely('projects cat', initProjectsCat);
+      // The cat pops up once the grid is scrolled to the bottom.
+      wrapper.addEventListener('scroll', () => {
+        if (cat) cat.classList.toggle('active', wrapper.scrollTop + wrapper.clientHeight >= wrapper.scrollHeight - 20);
+      }, { passive: true });
+
+      // On phones skrollr takes over every touch and blocks native scrolling,
+      // so a swipe that starts on the grid scrolls the grid here instead
+      // (with momentum). Taps, and swipes past the grid's top/bottom, are left
+      // to skrollr so card taps and the page animation keep working.
+      let mode = null;          // null = undecided, 'grid', or 'page'
+      let lastY = 0, lastT = 0, velocity = 0, glide = 0;
+      const isSkrollrMobile = () => document.documentElement.classList.contains('skrollr-mobile');
+      const maxScroll = () => wrapper.scrollHeight - wrapper.clientHeight;
+
+      wrapper.addEventListener('touchstart', (e) => {
+        if (!isSkrollrMobile()) return;
+        cancelAnimationFrame(glide);
+        mode = null;
+        velocity = 0;
+        lastY = e.touches[0].clientY;
+        lastT = e.timeStamp;
+      }, { passive: true });
+
+      wrapper.addEventListener('touchmove', (e) => {
+        if (!isSkrollrMobile() || mode === 'page') return;
+        const y = e.touches[0].clientY;
+        const dy = y - lastY;
+        if (mode === null) {
+          if (Math.abs(dy) < 3) return;
+          const canScroll = dy < 0 ? wrapper.scrollTop < maxScroll() - 1 : wrapper.scrollTop > 0;
+          mode = canScroll ? 'grid' : 'page';
+          if (mode === 'page') return;
+        }
+        e.stopPropagation();
+        e.preventDefault();
+        wrapper.scrollTop -= dy;
+        const dt = Math.max(e.timeStamp - lastT, 1);
+        velocity = 0.8 * (-dy / dt) + 0.2 * velocity;   // px per ms
+        lastY = y;
+        lastT = e.timeStamp;
+      }, { passive: false });
+
+      wrapper.addEventListener('touchend', (e) => {
+        if (mode !== 'grid') return;   // taps / page swipes go to skrollr
+        e.stopPropagation();
+        mode = null;
+        let v = velocity * 16;         // px per frame
+        const step = () => {
+          v *= 0.95;
+          if (Math.abs(v) < 0.5) return;
+          wrapper.scrollTop += v;
+          if (wrapper.scrollTop <= 0 || wrapper.scrollTop >= maxScroll()) return;
+          glide = requestAnimationFrame(step);
+        };
+        glide = requestAnimationFrame(step);
+      });
+
+      wrapper.addEventListener('touchcancel', (e) => {
+        if (mode !== 'grid') return;
+        e.stopPropagation();
+        mode = null;
+      });
+    }
   </script>
   <!-- <script src="src/js/main.js" async defer></script> -->
  </body>

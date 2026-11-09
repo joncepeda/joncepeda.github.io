@@ -1,256 +1,40 @@
-/* ============ PAGE LAYOUT (normal scrolling, no skrollr) ============ */
-html {
-  scroll-behavior: smooth;
+/* PROJECTS GRID — 1 column mobile, 3 tablet, 4 desktop.
+   The grid scrolls inside its pinned skrollr section. */
+.projects-slider-wrapper {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 16px 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #00cbf3 transparent;
 }
 
-body {
-  background: #0b0d12;
+.projects-grid {
+  padding-top: 4px;
 }
 
-.main-loader {
-  z-index: 10001;
-}
-
-/* Fixed space backdrop behind the hero and about sections */
-.space-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.space-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.space-bg .sky {
-  position: absolute;
-  inset: 0;
+.projects-grid .project-card {
+  aspect-ratio: 3 / 4;
   height: auto;
+  box-shadow: 0 8px 16px #00000080;
 }
 
-/* Hero */
-.hero {
-  position: relative;
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  min-height: 100svh;
-  overflow: hidden;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding-bottom: 12vh;
-}
-
-.jon-image {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.jon-image img {
-  display: block;
-}
-
-/* Rotating role line: Front-End Developer <-> Shopify Developer */
-.jon-roles {
-  position: relative;
-  overflow: hidden;
-}
-
-.jon-roles p {
-  position: absolute;
-  inset: 0;
-  animation: roleSwap 6s infinite;
-}
-
-.jon-roles p:nth-child(2) {
-  animation-delay: -3s;
-}
-
-@keyframes roleSwap {
-  0%   { opacity: 0; transform: translateY(100%); }
-  6%   { opacity: 1; transform: translateY(0); }
-  44%  { opacity: 1; transform: translateY(0); }
-  50%  { opacity: 0; transform: translateY(-100%); }
-  100% { opacity: 0; transform: translateY(-100%); }
-}
-
-.scroll-down {
-  text-decoration: none;
-}
-
-/* About */
-.about {
-  position: relative;
-  padding: 120px 0 160px;
-}
-
-.about::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 160px;
-  z-index: -1;
-  background: linear-gradient(to bottom, rgba(11, 13, 18, 0), #0b0d12);
-}
-
-.about p {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-/* Projects: space fades into sky, clouds drift across the seam */
-.projects-section {
-  position: relative;
-  isolation: isolate;
-  padding: clamp(160px, 28vh, 300px) 0 200px;
-  background: linear-gradient(to bottom, #7a8da0 0, #a7afbe 100vh, #a7afbe 100%);
-}
-
-.projects-section::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 120vh;
-  z-index: -2;
-  background: url("../images/landscape-sky.webp") center top / cover no-repeat;
-  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
-  mask-image: linear-gradient(to bottom, #000 70%, transparent);
-}
-
-.projects-section::after {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 40vh;
-  z-index: -1;
-  background: linear-gradient(to bottom, #0b0d12 0%, rgba(11, 13, 18, 0.6) 40%, rgba(11, 13, 18, 0) 100%);
-}
-
-.projects-clouds {
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 60vh;
-  overflow: hidden;
-  pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
-  mask-image: linear-gradient(to bottom, #000 55%, transparent);
-}
-
-.cloud {
-  position: absolute;
-  max-width: none;
-  opacity: 0.9;
-  animation: cloudDrift 28s ease-in-out infinite alternate;
-}
-
-.cloud-a { width: min(70vw, 900px); top: -6vh; left: -18%; }
-.cloud-b { width: min(60vw, 760px); top: 2vh; right: -16%; animation-duration: 34s; animation-delay: -8s; }
-.cloud-c { width: min(45vw, 560px); top: 14vh; left: 32%; opacity: 0.7; animation-duration: 40s; animation-delay: -15s; }
-
-@keyframes cloudDrift {
-  from { transform: translateX(-3vw); }
-  to   { transform: translateX(3vw); }
-}
-
-.projects-header h2,
-.projects-header p {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 2px 12px rgba(0, 0, 0, 0.35);
-}
-
-.projects-header .text-slate-700 {
-  text-shadow: none;
-}
-
-/* Cat peeks up from the bottom-right once the last project is visible */
-.blaze-cat {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 200px;
-  width: 160px;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.blaze-cat > div {
-  padding-right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-  transform: translateY(100%);
-  transition: transform 1.2s ease-in-out;
-}
-
-.blaze-cat.active > div {
-  transform: translateY(0);
-}
-
-.blaze-cat img {
-  width: 90px;
-  height: auto;
-}
-
-.blaze-cat span {
-  max-width: 100%;
-  font-size: 0.75rem;
-  line-height: 1.2;
-  overflow-wrap: anywhere;
-}
-
-/* Contact, with the mountains as the page footer */
-.contact-section {
-  position: relative;
-  padding-top: 40px;
-  background: linear-gradient(to bottom, #a7afbe, #8f9bb0);
-  color: #1e293b;
-}
-
-.contact-section a {
-  color: #0f172a;
-  font-weight: 600;
-}
-
-.contact-mountains {
-  display: block;
-  width: 100%;
-  height: clamp(160px, 26vw, 420px);
-  margin-top: 24px;
-  object-fit: cover;
-  object-position: bottom;
-}
-
-/* Smaller site names on the narrow 3- and 4-column cards */
 @media screen and (min-width: 768px) {
   .project-card-title {
     font-size: clamp(1.1rem, 1.5vw + 0.4rem, 1.75rem);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .cloud,
-  .jon-roles p { animation: none; }
-  .jon-roles p:nth-child(2) { display: none; }
+.jon-intro-bottom {
+  z-index: 9999;
 }
 
 /* PROJECT CARD — screenshot, dark overlay, centered site name */
 .project-card {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 3 / 4;
   cursor: pointer;
   border-radius: 8px;
   outline: none;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
 }
 
 .project-card-img {
@@ -456,6 +240,8 @@ html.project-modal-open body {
   height: 100%;
 }
 
-.project-card-tags span {
-  font-size: 0.6rem;
+/* No scrolling (and no scrollbar) while the loader is showing */
+html.is-loading,
+html.is-loading body {
+  overflow: hidden;
 }
